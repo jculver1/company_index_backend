@@ -1,13 +1,11 @@
 
-exports.seed = function(knex) {
-  // Deletes ALL existing entries
+exports.seed = function (knex) {
   return knex('founders').del()
     .then(function () {
-      // Inserts seed entries
       return knex('founders').insert([
-        {full_name: 'rowValue1', title: 'sdfsdf', company_id: 1 },
-        {full_name: 'rowValue2', title: 'sdfsdf', company_id: 2 },
-        {full_name: 'rowValue3', title: 'hiii', company_id: 2 },
-      ]);
-    });
-};
+        { full_name: 'Anya Folke Rutherfurd', title: 'CEO', company_id: 1 },
+        { full_name: 'Sarah Margarita Kárpáti', title: 'CEO', company_id: 2 },
+        { full_name: 'Ela Vera Krüger', title: 'CEO', company_id: 2 }
+      ])
+    })
+}
