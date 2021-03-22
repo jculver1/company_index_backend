@@ -1,0 +1,15 @@
+---
+application:
+  name: "company-index-backend"
+  project: "Backend-Company-Index"
+  organization: "QoveryCommunity"
+databases:
+- type: "POSTGRESQL"
+  name: "techstars"
+  version: "12"
+routers:
+- name: "main-company-index-backend"
+  routes:
+  - application_name: "company-index-backend"
+    paths:
+    - "/*"
