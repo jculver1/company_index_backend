@@ -4,9 +4,10 @@ const port = process.env.PORT || 3001
 const cors = require('cors')
 const parser = require('body-parser')
 const db = require('./db')
+require('dotenv').config()
 app.use(cors())
 app.use(parser.json())
-require('dotenv').config()
+
 
 app.get('/companies', (req, res, next) => {
   db('techstars')

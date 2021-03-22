@@ -1,16 +1,6 @@
-const { Client } = require('pg');
 
-const client = new Client({
-    connectionString: process.env.DATABASE_URL,
-    ssl: {
-      rejectUnauthorized: false
-    }
-})
-
-const knexConfig = require('./knexfile')[client]
+const environment = process.env.NODE_ENV || 'development';
+const knexConfig = require('./knexfile')[environment]
 const db = require('knex')(knexConfig)
-
-
-client.connect();
 
 module.exports = db
