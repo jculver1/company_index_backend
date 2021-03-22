@@ -2,8 +2,7 @@ module.exports = {
 
   production: {
     client: 'pg',
-    connection: process.env.DATABASE_URL || 'postgres://kvrxfipqczozrn:025e816e350661858171e4aa7c28b05c747df389d926962713838e7b19b2357c@ec2-3-91-127-228.compute-1.amazonaws.com:5432/df5pphbekve3r6',
-    ssl: { rejectUnauthorized: false }
+    connection: process.env.DATABASE_URL || 'postgres://csmtumindlpyqz:7eb96abd5857e7d2326840c604255f87c1ba6f96a7f1970acc700ae266ed7355@ec2-54-164-22-242.compute-1.amazonaws.com:5432/d2oen615t07pgf'
   },
 
   development: {
