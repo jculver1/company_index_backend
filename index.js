@@ -8,6 +8,17 @@ require('dotenv').config()
 app.use(cors())
 app.use(parser.json())
 
+const { Client } = require('pg');
+
+const client = new Client({
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false
+  }
+});
+
+client.connect();
+
 
 app.get('/companies', (req, res, next) => {
   db('techstars')
