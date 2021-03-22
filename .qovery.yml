@@ -1,14 +1,15 @@
+---
 application:
-  name: my-node-app
-  project: my-first-project
-  publicly_accessible: true
+  name: "company-index-backend"
+  project: "Backend-Company-Index"
+  organization: "QoveryCommunity"
 databases:
-- type: postgresql
+- type: "POSTGRESQL"
+  name: "techstars"
   version: "12"
-  name: my-psql
 routers:
-- name: my-router
+- name: "main-company-index-backend"
   routes:
-  - application_name: my-node-app
+  - application_name: "company-index-backend"
     paths:
-    - /
+    - "/*"
